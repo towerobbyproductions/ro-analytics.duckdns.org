@@ -90,4 +90,17 @@ function debounce(func, wait) {
             clearTimeout(timeout);
             func(...args);
         };
-       
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Экспорт
+window.utils = {
+    formatNumber,
+    formatDate,
+    highlightElement,
+    showToast,
+    Cache,
+    debounce
+};
